@@ -1,0 +1,1 @@
+# [Mobivity](http://www.mobivity.com) SmartSMS Templates
