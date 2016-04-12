@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!-- {% autoescape true %} -->
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Mobivity">
+		<title>SUBWAY® SmartSMS</title>
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="dist/styles/main.css">
+		<!-- ### FAVICON IMPORT ### -->
+		<link rel="icon" type="image/x-icon" href="dist/images/subway-favicon.png" /> 
+		<!-- ### To support cross browser cache controls ### -->
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+	</head>
+
+  <body>
+
+  <!-- ### Start Facebook Connect JS ### -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '923091201099481',
+        xfbml      : true,
+        version    : 'v2.5'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- ### End Facebook Connect JS ### -->
+  
+  <!-- ### Start Logo Container ### -->
+  <div class="container-fluid" id="logo" style="background-color: {{ zone1_background_color }};">
+    <img src="dist/images/subway-logo.png" alt="SUBWAY Logo" class="brandLogo">
+  </div>
+  <!-- ### End Logo Container ### -->
+  
+  <!-- ### Start Offer Text Container ### -->
+  <div class="container-fluid" id="offerText">
+    <h1>{{ offer_text }}</h1>
+  </div>
+  <!-- ### End Offer Text Container ### -->
+
+  <!-- ### Start Main Content Container ### -->
+
+  <div class="container">
+    
+    <!-- ### Start Main Legal Container ### -->
+    <section class="mainLegal" id="zone3Section">
+      <p>{{ offer_regulations_text }}</p>
+    </section>
+    <!-- ### End Main Legal Container ### -->
+
+    <!-- ### Start Redeem Button Section ### -->
+    <section class="zone4" id="init_redeem">
+      <section>
+        <a href="#" id="redeemButton">Redeem</a>
+      </section>
+    </section>
+    <!-- ### Start Redeem Button Section ### -->
+
+    <!-- ### Start Legal Warning ### -->
+    <section class="legalWarning">
+      <p>ONLY press REDEEM during the purchase process in the presence of the cashier.</p>
+    </section>
+    <!-- ### End Legal Warning ### -->
+
+    <!-- ### Start Expiration Date ### -->
+    <section class="expirationDate">
+      <p>{{ ExpiresDate }}</p>
+    </section>
+    <!-- ### End Expiration Date ### -->
+
+    <!-- ### Start Feedback Container ### -->
+    <section class="offerbuttons" id="feedback">
+      <button class="btn btn-thumbs-up" id="Likeofferfeedback" style="width: 90px;"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like</button>
+
+      &nbsp;
+
+      <button class="btn btn-thumbs-down" id="DisLikeofferfeedback" style="width: 90px;"><span class="glyphicon glyphicon-thumbs-down btn-fixed-width" aria-hidden="true"></span> Dislike</button>
+    </section>
+    <!-- ### End Feedback Container ### -->
+
+  </div>
+  <!-- ### End Main Content Container ### -->
+
+  <!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch modal
+</button>
+  
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <section class="confirmDialog">
+          <p>testing</p>
+        </section>
+    </div>
+</div>
+
+<script>
+  // Vertical centered modals
+  // you can give custom class like this // var modalVerticalCenterClass = ".modal.modal-vcenter";
+
+  var modalVerticalCenterClass = ".modal";
+  function centerModals($element) {
+      var $modals;
+      if ($element.length) {
+          $modals = $element;
+      } else {
+          $modals = $(modalVerticalCenterClass + ':visible');
+      }
+      $modals.each( function(i) {
+          var $clone = $(this).clone().css('display', 'block').appendTo('body');
+          var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
+          top = top > 0 ? top : 0;
+          $clone.remove();
+          $(this).find('.modal-content').css("margin-top", top);
+      });
+  }
+  $(modalVerticalCenterClass).on('show.bs.modal', function(e) {
+      centerModals($(this));
+  });
+  $(window).on('resize', centerModals);
+</script>
+
+
+
+
+
+
+  <!-- End of Working Space -->
+
+
+      <div class="container-fluid">
+          
+      </section>
+      <!-- Offer Valid For Text (Includes Countdown Timer) -->
+      <section id="redeem" class="zone4 hidden">
+          <div style="font-size: 10px;" >{{ redeem_fine_print_text }}</div>
+          <p id="smartsms" class="hide">{{ smartsms }}</p>
+          <canvas id="circlecanvas" width="176" height="176" style="z-index:0; position: absolute; left: 50%;margin-left:-88px;margin-top:0px;"></canvas>
+          <div style="width: 100%; position: absolute;margin-top:45px;">
+              <span>Coupon Expires in</span>
+              <div class="redeem_timer" id="timer"><span id="minutes" attr-val="5">05</span>:<span id="seconds" attr-val="00">00</span></div>
+              <span class="redeem_date">12/25/15</span>               
+          </div>
+          <div style="position: relative; top: 180px;">
+              <span>If timer hand is not moving this offer is not valid.</span>
+          </div>
+          <script>
+              var strokeStyle = '{{ redeem_button_color }}';
+          </script>
+          
+      </section>
+      
+      <!-- No Longer Valid - Hidden on Load, after Timer is up #redeem section will have the .hide class added, and this section will have the .hide class removed -->
+      <section id="timesUp" class="zone4 hidden">
+          <span class="timesUp">Coupon Expired</span><br>
+          <span class="redeem_date">12/25/15</span>
+          <br>
+               <span class="redeem_time"></span>
+      </section>
+
+      <section id="init_refer" class="zone4 top-space hidden">
+              <a id="referButton" class="coupon-button">EARN MORE OFFERS</a>
+              <span style="color: #676966" id="init_refer_desc">After redeeming this coupon, click the button above to find ways to earn more offers.</span>
+              <span id="refer" class="hide">{{ refer }}</span>
+      </section>
+      <section id="init_referDashboard" class="zone5"  style="display:none;">
+              <div class="container">
+				<div class="row row-space top-space" id="raf_header">
+				Tell them to text <b>KEYWORD</b> to <b>782929</b>
+				</div>
+                  <div class="row row-space top-space">
+                      <div class="pull-left text-left">Progress</div>
+                      <div class="pull-right text-right">0/{{ Max_num_referals }} (0%)</div>
+                  </div>
+                  <div class="row row-space" id="referal_images">
+                  </div>
+                  <hr style="margin-top:5px;" />
+                  <div class="row row-space">
+                      Achievements
+                  </div>
+                  <div class="row row-space">
+                      <div class="col-xs-2 narrow-space"><img class="img-responsive" src="https://storage.googleapis.com/mobivitysmartsms.appspot.com/static/smartsms-static/RAF/icon_award_blank.png"></img></div>
+                      <div class="col-xs-3"></div>
+                  </div>
+                  <hr style="margin-top:5px;" />
+                  <div class="row row-space">
+                      Share<br/>
+                      <center>
+                      <small class="text-nowrap">Get {{ Max_num_referals }} friends to sign up and get a free 6" sub</small></br>
+                      <small>with purchase of any 30 oz drink.</small>
+                      </center>
+                  </div>
+                  <div class="row row-space">
+                      <div class="col-xs-4 narrow-space"><a href="javascript:sendFacebookMsg();"><img class="img-responsive" src="https://storage.googleapis.com/mobivitysmartsms.appspot.com/static/smartsms-static/RAF/face_button.png"></img></a></div>    
+                      <div class="col-xs-4 narrow-space"><a href="javascript:sendTwitterMsg();"><img class="img-responsive" src="https://storage.googleapis.com/mobivitysmartsms.appspot.com/static/smartsms-static/RAF/twit_button.png"></img></a></div>
+                      <div class="col-xs-4 narrow-space"><a href="javascript:sendSMSMsg();"><img class="img-responsive" src="https://storage.googleapis.com/mobivitysmartsms.appspot.com/static/smartsms-static/RAF/txt_button.png"></img></a></div>
+                  </div>
+                  <div>   
+                      <a id="showredeem" class="coupon-button">RETURN TO COUPON</a>
+                  </div>    
+              </div>
+      </section>
+      </div>
+      <p id="location" class="hide"></p>
+      <p id="location_result" class="hide"></p>
+      <p id="sid" class="hide">{{ sid }}</p>
+      <p id="keyword" class="hide"></p>
+      <p id="keywordtosubscribeto" class="hide">{{keywordtosubscribeto}}</p>
+      <p id="campaignidtosubscribeto" class="hide">{{campaignidtosubscribeto}}</p>
+      <p id="campaignid" class="hide">{{campaignid}}</p>
+      <p id="achivementcampaignid" class="hide">{{achivementcampaignid}}</p>
+      <p id="Max_num_referals" class="hide">{{ Max_num_referals }}</p>
+      <p id="ShareMessage" class="hide">{{ ShareMessage }}</p>
+      <p id="shareURL" class="hide"></p>
+      <p id="keywordraf" class="hide">{{keywordraf}}</p>
+      <p id="offerfeedback" class="hide">{{offerfeedback}}</p>
+      <p id="enablefeedback" class="hide">{{feedback}}</p>
+  <!-- ### JQUERY/main.js INCLUDE ### -->
+  <div id="dialog-confirm" title="REDEEM COUPON" style="display:none;">
+        <div style="color: #676966" class="dialog-center">
+            <span>{{ confirmcancel_text }}</span>
+            <br>
+            <br>
+            <span>
+                To redeem this coupon cashier must be present.</span>
+            <br>
+            <br>
+            <span>
+                Coupon will expire  within 5 minutes after "CONFIRM" is selected.
+            </span>
+        </div>
+        <div class="dialog-footer-in">
+            <a id="cancelButton" class="coupon-button">CANCEL</a>
+            <a id="confirmButton" class="coupon-button">CONFIRM</a>
+        </div>      
+  </div>
+  
+  
+  <div id="dialog-error" title="ERROR HAPPENED" style="display:none;">
+        <div style="color: #676966" class="dialog-center">
+            <br>
+            <span>
+                PLEASE TRY AGAIN</span>
+            <br>             
+        </div>
+        <div class="dialog-footer-in">
+            <a id="closeButton" class="coupon-button">CLOSE</a>
+        </div>
+  </div>    
+
+  <div id="dialog-expired" title="SKIP" style="display:none;">
+        <div style="color: #676966" class="dialog-center">
+            <br>
+            <span>
+                Skip! couldn't get it again.</span>
+            <br>             
+        </div>
+        <div class="dialog-footer-in">
+            <a id="expiredButton" class="coupon-button">CLOSE</a>
+        </div>
+  </div>      
+   <script src="https://storage.googleapis.com/mobivitysmartsms.appspot.com/static/smartsms-static/test-main_target.js?version=12"></script>
+   <!-- <script src="/smartsms-static/test-main_target.js?version=1"></script> -->
+
+   <!-- ### jQuery CDN Include ### -->
+   <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+   <!-- ### Bootstrap JS CDN Include ### -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+
+</html>
+<!-- {% endautoescape %} -->
+
