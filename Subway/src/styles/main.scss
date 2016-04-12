@@ -31,8 +31,8 @@ $greyDark: #58595B;
 $white: #f4f4f4;
 $black: #58595B;
 
-$subwayLight: #68BC49;
-$subwayDark: #008952;
+$clientPrimary: #68BC49;
+$clientSecondary: #008952;
 
 $gutter: 20px;
 $box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
@@ -49,7 +49,7 @@ html, body {
 	background-color: #fff;
 	font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 400;
-	color: $subwayDark;
+	color: $clientSecondary;
 	text-align: center;
 }
 
@@ -98,7 +98,7 @@ p {
 
 #offerText {
 
-	background-color: $subwayLight;
+	background-color: $clientPrimary;
 	padding: $gutter 0px;
 	color: #fff;
 	width: 100% !important;
@@ -115,7 +115,7 @@ p {
 	
 	p {
 		font-size: 10px;
-		color: $subwayLight;
+		color: $clientPrimary;
 	}
 
 }
@@ -132,7 +132,7 @@ p {
 	font-size: 18px;
 	font-weight: 700;
 	color: #fff;
-	background: $subwayDark;
+	background: $clientSecondary;
 	padding: $gutter/4 $gutter/2;
 	border-radius: 4px;
 	-webkit-box-shadow: $box-shadow;
@@ -181,10 +181,38 @@ p {
 
 }
 
+// Confirm Dialog Modal
+
 .confirmDialog {
 	width: 75%;
 	background-color: $white;
 	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+	padding: 0;
+
+	section {
+		padding: 0px;
+	}
+
+	.header {
+		padding: $gutter/2;
+		color: $white;
+		background-color: $clientPrimary;
+
+		h2 {
+			margin: 0;
+			padding: 0;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+	}
+
+	.modalContent {
+		padding: $gutter/2;
+		background-color: $white;
+	}
+
 }
 
 
