@@ -183,37 +183,73 @@ p {
 
 // Confirm Dialog Modal
 
-.confirmDialog {
+#myModal {
+	
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
 	width: 75%;
-	background-color: $white;
-	border-radius: $border-radius;
-	box-shadow: $box-shadow;
-	padding: 0;
+	margin: 0px auto;
 
-	section {
-		padding: 0px;
-	}
-
-	.header {
-		padding: $gutter/2;
-		color: $white;
+	.modal-header {
+		padding: $gutter/2 $gutter;
+		border-bottom: none;
 		background-color: $clientPrimary;
-
-		h2 {
-			margin: 0;
-			padding: 0;
-			font-weight: 700;
-			text-transform: uppercase;
-		}
-
+		color: $white;
+		-webkit-border-top-left-radius: $border-radius;
+		-webkit-border-top-right-radius: $border-radius;
+		-moz-border-radius-topleft: $border-radius;
+		-moz-border-radius-topright: $border-radius;
+		border-top-left-radius: $border-radius;
+		border-top-right-radius: $border-radius;
+		text-transform: uppercase;
 	}
 
-	.modalContent {
-		padding: $gutter/2;
-		background-color: $white;
+	.modal-body {
+		width: 75%;
+		margin: 0px auto;
 	}
 
 }
+
+// Confirm Dialog Modal
+
+// .confirmDialog {
+// 	width: 75%;
+// 	background-color: $white;
+// 	border-radius: $border-radius;
+// 	box-shadow: $box-shadow;
+// 	padding: 0;
+
+// 	section {
+// 		padding: 0px;
+// 	}
+
+// 	.header {
+// 		padding: $gutter/2;
+// 		color: $white;
+// 		background-color: $clientPrimary;
+
+// 		h2 {
+// 			margin: 0;
+// 			padding: 0;
+// 			font-weight: 700;
+// 			text-transform: uppercase;
+// 		}
+
+// 	}
+
+// 	.modalContent {
+// 		padding: $gutter/2;
+// 		background-color: $white;
+// 	}
+
+// }
+
+
 
 
 
