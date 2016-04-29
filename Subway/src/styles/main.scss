@@ -100,11 +100,16 @@ p {
 
 	background-color: $clientPrimary;
 	padding: $gutter 0px;
-	color: #fff;
+	color: $white;
 	width: 100% !important;
 
 	h1 {
 		font-size: 24px;
+		margin-bottom: $gutter/2;
+	}
+
+	p {
+		font-size: 10px;
 	}
 
 }
@@ -115,7 +120,7 @@ p {
 	
 	p {
 		font-size: 10px;
-		color: $clientPrimary;
+		color: $black;
 	}
 
 }
@@ -124,6 +129,7 @@ p {
 
 #init_redeem {
 	padding: 0;
+	margin: 0;
 }
 
 #redeemButton {
@@ -145,7 +151,7 @@ p {
 .expirationDate {
 	padding: $gutter/2 0px;
 	font-size: 10px;
-	color: $greyDark;
+	color: $black;
 }
 
 // Feedback Styles
@@ -191,7 +197,7 @@ p {
 	bottom: 0;
 	left: 0;
 	overflow: hidden;
-	width: 75%;
+	width: 85%;
 	margin: 0px auto;
 
 	.modal-header {
@@ -211,6 +217,36 @@ p {
 	.modal-body {
 		width: 75%;
 		margin: 0px auto;
+
+		p {
+			margin-bottom: $gutter;
+		}
+		
+		.button {
+			display: block;
+			padding: $gutter/2 $gutter;
+			background-color: $white;
+			border-radius: $border-radius;
+			box-shadow: $box-shadow;
+			color: $white;
+			font-weight: 700;
+			font-size: 18px;
+			margin-bottom: $gutter;
+
+			&:hover {
+				text-decoration: none;
+			}
+
+			&#cancel {
+				background-color: $clientPrimary;
+			}
+
+			&#confirm {
+				background-color: $clientSecondary;
+			}
+
+		}
+
 	}
 
 }

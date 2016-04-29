@@ -55,6 +55,7 @@
   <!-- ### Start Offer Text Container ### -->
   <div class="container-fluid" id="offerText">
     <h1>{{ offer_text }}</h1>
+    <p>{{ short_legal }}</p>
   </div>
   <!-- ### End Offer Text Container ### -->
 
@@ -78,15 +79,9 @@
 
     <!-- ### Start Legal Warning ### -->
     <section class="legalWarning">
-      <p>ONLY press REDEEM during the purchase process in the presence of the cashier.</p>
+      <p>ONLY press REDEEM during the purchase process in the presence of the cashier. Expires on {{ ExpiresDate }}.</p>
     </section>
     <!-- ### End Legal Warning ### -->
-
-    <!-- ### Start Expiration Date ### -->
-    <section class="expirationDate">
-      <p>{{ ExpiresDate }}</p>
-    </section>
-    <!-- ### End Expiration Date ### -->
 
     <!-- ### Start Feedback Container ### -->
     <section class="offerbuttons" id="feedback">
@@ -115,8 +110,8 @@
         <!-- ### State Modal Body ### -->
         <div class="modal-body">
           <p>{{ confirmcancel_text }} To redeem this coupon cashier must be present. Coupon will expire within 5 minutes after "CONFIRM" is selected.</p>
-          <a href="#" data-dismiss="modal">Cancel</a>
-          <a href="#">Confirm</a>
+          <a href="#" data-dismiss="modal" class="button" id="cancel">Cancel</a>
+          <a href="#" class="button" id="confirm">Confirm</a>
         </div>
         <!-- ### End Modal Body ### -->
 
@@ -124,24 +119,6 @@
     </div>
   </div>
   <!-- ### End New Modal Container ### -->
-
-
-  
-  <!-- ### Start Modal Container ### -->
-  <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <section class="confirmDialog">
-          <div class="container-fluid header">
-            <h2>Redeem Coupon</h2>
-          </div>
-          <div class="modalContent container">
-            <p>{{ confirmcancel_text }} To redeem this coupon cashier must be present. Coupon will expire within 5 minutes after "CONFIRM" is selected.</p>
-          </div>
-        </section>
-    </div>
-  </div> -->
-  <!-- ### End Modal Container -->
-
 
    <!-- ### jQuery CDN Include ### -->
    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
