@@ -53,6 +53,7 @@ var Util = function () {
     };
 
     Util.addZ = function addZ(n) {
+        if (n === 0) return "00";
         if (!n) return "0";
         return (n < 10 ? '0' : '') + n;
     };

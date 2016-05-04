@@ -69,8 +69,8 @@
       <!-- ### Start Countdown Text ### -->
       <div class="col-xs-6 columnHeightMatch" id="countdownText">
         <div class="verticalCenterWrapper">
-          <h3>Expiration Timer</h3>
-          <p>Coupon expires on {{ ExpiresDate }}.</p>
+          <h3>Coupon Expired</h3>
+          <p>{{ ExpiresDate }} at {{ ExpiresTime }}.</p>
         </div>
       </div>
       <!-- ### End Countdown Text ### -->
@@ -131,7 +131,7 @@
   <!-- ### Start Countdown Timer Function ### -->
   <script>
     $(function() {
-      var yeah = new Countdown({minutes: 0, seconds: 30}, $(".c-container"));
+      var yeah = new Countdown({minutes: 0, seconds: 00}, $(".c-container"));
     })
   </script>
   <!-- ### End Countdown Timer Function ### -->
