@@ -19,14 +19,32 @@
 
 		text-align: left;
 
-		h3 {
-			font-size: 16px;
-			font-weight: 700;
-			margin-bottom: $gutter/2;
-		}
+		.verticalCenterWrapper {
 
-		p {
-			font-size: 12px;
+			@include vertical-align();
+
+		  h3 {
+		  	font-size: 16px;
+		  	font-weight: 700;
+		  	margin-bottom: $gutter/2;
+		  }
+
+		  @media screen and (min-width: 375px) {
+		  	h3 {
+		  		font-size: 20px;
+		  	}
+		  }
+
+		  @media screen and (min-width: 414px) {
+		  	h3 {
+		  		font-size: 22px;
+		  	}
+		  }
+
+		  p {
+		  	font-size: 12px;
+		  }
+
 		}
 
 	}
@@ -44,7 +62,7 @@
 				width: 100%;
 				text-align: center;
 				color: $clientPrimary;
-				font-size: 36px;
+				font-size: 32px;
 				line-height: 24px;
 				top: 50%;
 				margin-top: -15px;

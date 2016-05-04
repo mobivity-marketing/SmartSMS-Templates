@@ -38,3 +38,13 @@ $gutter: 20px;
 $box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
 $border-radius: 4px;
 $transition: all 0.35s ease;
+
+// Vertically Center Mixin
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
