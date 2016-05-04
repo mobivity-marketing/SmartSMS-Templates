@@ -11,7 +11,7 @@
 		<!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<!-- Main CSS -->
-		<link rel="stylesheet" href="dist/styles/offerScreen.css">
+		<link rel="stylesheet" href="dist/styles/redemptionScreen.css">
     <!-- Animate CSS Include -->
     <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
 		<!-- ### FAVICON IMPORT ### -->
@@ -62,16 +62,56 @@
   <!-- ### Start Main Content Container ### -->
 
   <div class="container">
+    
+    <!-- ### Start Countdown Row ### -->
+    <div class="row" id="expirationTimerSection">
+
+      <!-- ### Start Countdown Text ### -->
+      <div class="col-xs-6" id="countdownText">
+        <h3>Expiration Timer</h3>
+        <p>Coupon expires on {{ ExpiresDate }}.</p>
+      </div>
+      <!-- ### End Countdown Text ### -->
+
+      <!-- ### Start Countdown Timer -->
+      <div class="col-xs-6" id="countdownTimer">
+        <div class="c-container">
+          <div class="c-text"></div>
+          <svg id="yeah" viewbox="0 0 100 100">
+            <path id="bg" stroke-linecap="round" stroke-width="4" stroke="#E6E7E8" fill="none" d="M50 2 a 48 48 0 0 1 0 96 a 48 48 0 0 1 0 -96"></path>
+            <path id="progress" stroke-linecap="round" stroke-width="4" fill="none" d="M50 2 a 48 48 0 0 1 0 96 a 48 48 0 0 1 0 -96"></path>
+          </svg>
+        </div>
+      </div>
+      <!-- ### End Countdown Timer ### -->
+
+    </div>
+    <!-- ### End Countdown Row ### -->
 
   </div>
   <!-- ### End Main Content Container ### -->
 
    <!-- ### jQuery CDN Include ### -->
    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
    <!-- ### Bootstrap JS CDN Include ### -->
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+   <!-- ### Inclusions for Countdown Timer ### -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+   <script src="https://rawgit.com/mckamey/countdownjs/master/countdown.min.js"></script>
+   <script src="https://rawgit.com/mckamey/countdownjs/master/countdown.min.js"></script>
+
    <!-- ### Main Minified JS Include -->
    <script src="dist/scripts/main.min.js"></script>
+
+   <script>
+     $(function() {
+         var yeah = new Countdown({minutes: 5, seconds: 10}, $(".c-container"));
+     })
+   </script>
+
  </body>
 
 </html>

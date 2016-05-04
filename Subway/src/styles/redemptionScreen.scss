@@ -1,0 +1,62 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////
+// Imports
+// //////////////////////////////////////////////////////////////////////////////////////////////
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+@import 'reset';
+@import 'variables';
+@import 'global';
+
+// //////////////////////////////////////////////////////////////////////////////////////////////
+// Expiration Text Section
+// //////////////////////////////////////////////////////////////////////////////////////////////
+
+#expirationTimerSection {
+
+	padding: $gutter*2 0;
+	
+	#countdownText {
+
+		text-align: left;
+
+		h3 {
+			font-size: 16px;
+			font-weight: 700;
+			margin-bottom: $gutter/2;
+		}
+
+		p {
+			font-size: 12px;
+		}
+
+	}
+
+	#countdownTimer {
+
+		.c-container {
+
+			position: relative;
+			width: 90%;
+			margin: 0px auto;
+
+			.c-text {
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				color: $clientPrimary;
+				font-size: 36px;
+				line-height: 24px;
+				top: 50%;
+				margin-top: -15px;
+				font-weight: 400;
+			}
+			
+			svg {
+				width: 100%;
+			}
+
+		}
+
+	}
+
+}
