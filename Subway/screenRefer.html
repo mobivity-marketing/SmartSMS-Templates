@@ -62,7 +62,7 @@
     
     <!-- ### Start Progess Text Container ### -->
     <section id="progressText">
-      <h3>Get <span id="referalsLeft">3</span> more friends to sign up to receive <span id="referalReward">something</span>!</h3>
+      <h3>Get <span id="referalsLeft">{{ Progress }}</span> more friends to sign up to receive <span id="referalReward">{{ raf_reward_text }}</span>!</h3>
     </section>
     <!-- ### End Progress Text Container ### -->
 
@@ -103,6 +103,12 @@
       <a href="screenOffer.html" id="button">Return to Offer</a>
     </div>
     <!-- ### End Return to Offer Button ### -->
+
+    <!-- ### Start RAF Legal ### -->
+    <div class="container" id="rafLegal">
+      <p>{{ raf_legal_message }}</p>
+    </div>
+    <!-- ### End RAF Legal ### -->
 
   </div>
   <!-- ### End Main Content Container ### -->
