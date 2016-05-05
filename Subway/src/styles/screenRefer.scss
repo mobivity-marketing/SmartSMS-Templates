@@ -8,6 +8,129 @@
 @import 'global';
 
 // //////////////////////////////////////////////////////////////////////////////////////////////
-// Expiration Text Section
+// Progress Text Section
 // //////////////////////////////////////////////////////////////////////////////////////////////
+
+#progressText {
+	
+	h3 {
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 28px;
+
+		span {
+			font-weight: 700;
+		}
+
+	}
+
+}
+
+// //////////////////////////////////////////////////////////////////////////////////////////////
+// Share Buttons Section
+// //////////////////////////////////////////////////////////////////////////////////////////////
+
+#shareButtons {
+
+	.row {
+		margin: 0px auto;
+		padding: 0px;
+		text-align: center;
+	}
+
+	.centered {
+		float: none;
+		margin: 0 auto;
+	}
+
+	.button {
+		border-radius: 4px;
+		font-size: 12px;
+		color: #fff;
+		padding: 4px 20px;
+		text-decoration: none;
+		width: 70px;
+		box-shadow: $box-shadow;
+		margin: 0px auto;
+	}
+
+	#facebook {
+		.button {
+			background-color: #3B5998;
+			background-image: url('http://i.imgur.com/6LBKUKf.png');
+			background-repeat: no-repeat;
+			background-position: 15% 45%;
+			background-size: 6px;
+			padding-left: 27px;
+			display: block;
+		}
+	}
+
+	#twitter {
+		.button {
+			background-color: #55acee;
+			background-image: url('http://i.imgur.com/DzbV4JZ.png');
+			background-repeat: no-repeat;
+			background-position: 12% 50%;
+			background-size: 15px;
+			padding-left: 30px;
+			display: block;
+		}
+	}
+
+	#sms {
+		.button {
+			background-color: #60B561;
+			background-image: url('http://i.imgur.com/q8JjQLf.png');
+			background-repeat: no-repeat;
+			background-position: 20% 50%;
+			background-size: 15px;
+			padding-left: 35px;
+			display: block;
+		}
+	}
+
+}
+
+// //////////////////////////////////////////////////////////////////////////////////////////////
+// Progress Bar Container
+// //////////////////////////////////////////////////////////////////////////////////////////////
+
+#progressBar {
+	
+	padding: 0px;
+	min-height: 35px;
+	float: center;
+	text-align: center;
+	margin: $gutter auto;
+	width: 100%;
+	border: 2px solid $clientSecondary;
+	border-radius: 25px;
+	background: none;
+	color: #fff;
+
+	.progress {
+		float: left;
+		min-height: 30px;
+		border: 3px solid #fff;
+		text-align: center;
+		margin: 0px auto;
+		width: 40%;
+		border-radius: 25px;
+		background: $clientSecondary;
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
 

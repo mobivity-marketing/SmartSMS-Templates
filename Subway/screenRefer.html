@@ -52,14 +52,59 @@
   
   <!-- ### Start Offer Text Container ### -->
   <div class="container-fluid" id="offerText">
-    <h1>{{ offer_text }}</h1>
-    <p>{{ short_legal }}</p>
+    <h1>Refer Friends to Earn More Offers</h1>
+    <p>Valid only at participating locations.</p>
   </div>
   <!-- ### End Offer Text Container ### -->
 
   <!-- ### Start Main Content Container ### -->
   <div class="container">
     
+    <!-- ### Start Progess Text Container ### -->
+    <section id="progressText">
+      <h3>Get <span id="referalsLeft">3</span> more friends to sign up to receive <span id="referalReward">something</span>!</h3>
+    </section>
+    <!-- ### End Progress Text Container ### -->
+
+    <!-- ### Start Share Buttons Container ### -->
+    <section id="shareButtons">
+      <div class="row centered">
+
+        <!-- Start Facebook -->
+        <div class="col-xs-4" id="facebook">
+          <a href="#" class="button">Share</a>
+        </div>
+        <!-- End Facebook -->
+
+        <!-- Start Twitter -->
+        <div class="col-xs-4" id="twitter">
+          <a href="#" class="button">Tweet</a>
+        </div>
+        <!-- End Twitter -->
+
+        <!-- Start SMS -->
+        <div class="col-xs-4" id="sms">
+          <a href="#" class="button">SMS</a>
+        </div>
+        <!-- End SMS -->
+
+      </div>
+    </section>
+    <!-- ### End Share Buttons Container ### -->
+
+    <!-- ### Start Progress Bar Container ### -->
+    <div class="container">
+      <section id="progressBar">
+        <p class="progress">2 of 5</p>
+      </section>
+    </div>
+    <!-- ### End Progress Bar Container ### -->
+
+    <!-- ### Start Return to Offer Button ### -->
+    <div class="container" id="returnToOffer">
+      <a href="screenOffer.html" id="button">Return to Offer</a>
+    </div>
+    <!-- ### End Return to Offer Button ### -->
 
   </div>
   <!-- ### End Main Content Container ### -->
@@ -70,30 +115,8 @@
   <!-- ### Bootstrap JS CDN Include ### -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  <!-- ### Inclusions for Countdown Timer ### -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
-  <script src="https://rawgit.com/mckamey/countdownjs/master/countdown.min.js"></script>
-  <script src="https://rawgit.com/mckamey/countdownjs/master/countdown.min.js"></script>
-
   <!-- ### Main Minified JS Include -->
   <script src="dist/scripts/main.min.js"></script>
-
-  <!-- ### Start Match Height Function ### -->
-  <script>
-    $(function() {
-        $('.columnHeightMatch').matchHeight();
-    });
-  </script>
-  <!-- ### End Match Height Function ### -->
-
-  <!-- ### Start Countdown Timer Function ### -->
-  <script>
-    $(function() {
-      var yeah = new Countdown({minutes: 0, seconds: 00}, $(".c-container"));
-    })
-  </script>
-  <!-- ### End Countdown Timer Function ### -->
 
  </body>
 
