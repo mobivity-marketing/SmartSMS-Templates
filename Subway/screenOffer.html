@@ -11,10 +11,8 @@
 		<!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<!-- Main CSS -->
-		<link rel="stylesheet" href="dist/styles/offerScreen.css">
-    <!-- Animate CSS Include -->
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
-		<!-- ### FAVICON IMPORT ### -->
+		<link rel="stylesheet" href="dist/styles/screenOffer.css">
+    <!-- ### FAVICON IMPORT ### -->
 		<link rel="icon" type="image/x-icon" href="dist/images/subway-favicon.png" /> 
 		<!-- ### To support cross browser cache controls ### -->
 		<meta http-equiv="cache-control" content="max-age=0" />
@@ -47,7 +45,7 @@
   <!-- ### End Facebook Connect JS ### -->
   
   <!-- ### Start Logo Container ### -->
-  <div class="container-fluid" id="logo" style="background-color: {{ zone1_background_color }};">
+  <div class="container-fluid" id="logo">
     <img src="dist/images/subway-logo.png" alt="SUBWAY Logo" class="brandLogo">
   </div>
   <!-- ### End Logo Container ### -->
@@ -64,13 +62,13 @@
   <div class="container">
     
     <!-- ### Start Main Legal Container ### -->
-    <section class="mainLegal" id="zone3Section">
+    <section class="mainLegal">
       <p>{{ offer_regulations_text }}</p>
     </section>
     <!-- ### End Main Legal Container ### -->
 
     <!-- ### Start Redeem Button Section ### -->
-    <section class="zone4" id="init_redeem" data-toggle="modal" data-target="#myModal">
+    <section id="init_redeem" data-toggle="modal" data-target="#myModal">
       <section>
         <a href="#" id="button">Redeem</a>
       </section>
@@ -83,15 +81,15 @@
     </section>
     <!-- ### End Legal Warning ### -->
 
-    <!-- ### Start Feedback Container ### -->
-    <section class="offerbuttons" id="feedback">
+    <!-- ### Start Feedback Container - Currently Not Included ### -->
+    <!-- <section class="offerbuttons" id="feedback">
       <button class="btn btn-thumbs-up" id="Likeofferfeedback" style="width: 90px;"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like</button>
 
       &nbsp;
 
       <button class="btn btn-thumbs-down" id="DisLikeofferfeedback" style="width: 90px;"><span class="glyphicon glyphicon-thumbs-down btn-fixed-width" aria-hidden="true"></span> Dislike</button>
-    </section>
-    <!-- ### End Feedback Container ### -->
+    </section> -->
+    <!-- ### End Feedback Container - Currently Not Included ### -->
 
   </div>
   <!-- ### End Main Content Container ### -->
@@ -110,8 +108,8 @@
         <!-- ### State Modal Body ### -->
         <div class="modal-body">
           <p>{{ confirmcancel_text }}</p>
+          <a href="screenRedeem.html" class="button" id="confirm">Confirm</a>
           <a href="#" data-dismiss="modal" class="button" id="cancel">Cancel</a>
-          <a href="redemptionScreen.html" class="button" id="confirm">Confirm</a>
         </div>
         <!-- ### End Modal Body ### -->
 
