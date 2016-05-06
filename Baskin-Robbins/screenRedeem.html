@@ -7,13 +7,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Mobivity">
-		<title>SUBWAY® SmartSMS</title>
+		<title>Baskin-Robbins SmartSMS</title>
 		<!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="dist/styles/screenRedeem.css">
     <!-- ### FAVICON IMPORT ### -->
-		<link rel="icon" type="image/x-icon" href="dist/images/subway-favicon.png" /> 
+		<link rel="icon" type="image/x-icon" href="dist/images/favicon.png" /> 
 		<!-- ### To support cross browser cache controls ### -->
 		<meta http-equiv="cache-control" content="max-age=0" />
 		<meta http-equiv="cache-control" content="no-cache" />
@@ -46,16 +46,15 @@
   
   <!-- ### Start Logo Container ### -->
   <div class="container-fluid" id="logo">
-    <img src="dist/images/subway-logo.png" alt="SUBWAY Logo" class="brandLogo">
+    <img src="dist/images/logo.png" alt="Baskin-Robbins Logo" class="brandLogo">
   </div>
   <!-- ### End Logo Container ### -->
   
-  <!-- ### Start Offer Text Container ### -->
-  <div class="container-fluid" id="offerText">
-    <h1>{{ offer_text }}</h1>
-    <p>{{ short_legal }}</p>
+  <!-- ### Start Offer Image Container ### -->
+  <div class="container" id="offerImage">
+    <img src="dist/images/image-2.png" alt="Baskin-Robbins Offer Image">
   </div>
-  <!-- ### End Offer Text Container ### -->
+  <!-- ### End Offer Image Container -->
 
   <!-- ### Start Main Content Container ### -->
 
@@ -79,7 +78,7 @@
           <div class="c-text"></div>
           <svg id="yeah" viewbox="-5 -5 110 110">
             <path id="bg" stroke-linecap="round" stroke-width="10" stroke="#E6E7E8" fill="none" d="M50 2 a 48 48 0 0 1 0 96 a 48 48 0 0 1 0 -96"></path>
-            <path id="progress" stroke-linecap="round" stroke-width="10" stroke="#68BC49" fill="none" d="M50 2 a 48 48 0 0 1 0 96 a 48 48 0 0 1 0 -96"></path>
+            <path id="progress" stroke-linecap="round" stroke-width="10" stroke="#e45bbf" fill="none" d="M50 2 a 48 48 0 0 1 0 96 a 48 48 0 0 1 0 -96"></path>
           </svg>
         </div>
       </div>
@@ -90,7 +89,7 @@
 
     <!-- ### Start Refer a Friend Button ### -->
     <div id="referButton">
-      <a href="screenRefer.html" id="button">Earn More Free Subs!</a>
+      <a href="screenRefer.html" id="button">Earn More Great Offers!</a>
     </div>
     <!-- ### End Refer a Friend Button ### -->
 
@@ -129,7 +128,7 @@
   <!-- ### Start Countdown Timer Function ### -->
   <script>
     $(function() {
-      var yeah = new Countdown({minutes: 0, seconds: 30}, $(".c-container"));
+      var yeah = new Countdown({minutes: 15, seconds: 0}, $(".c-container"));
     })
   </script>
   <!-- ### End Countdown Timer Function ### -->
