@@ -52,7 +52,7 @@
   
   <!-- ### Start Offer Image Container ### -->
   <div class="container" id="offerImage">
-    <img src="dist/images/image-2.png" alt="Baskin-Robbins Offer Image">
+    <img src="{{ redemptionImage }}" alt="Baskin-Robbins Redemption Image">
   </div>
   <!-- ### End Offer Image Container -->
 
@@ -128,7 +128,7 @@
   <!-- ### Start Countdown Timer Function ### -->
   <script>
     $(function() {
-      var yeah = new Countdown({minutes: 15, seconds: 0}, $(".c-container"));
+      var yeah = new Countdown({minutes: {{ CountdownMinutes }}, seconds: 0}, $(".c-container"));
     })
   </script>
   <!-- ### End Countdown Timer Function ### -->

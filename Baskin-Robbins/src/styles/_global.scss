@@ -64,6 +64,9 @@ p {
 	margin: 0px auto;
 	padding: $gutter/2 0px;
 	background-color: $clientPrimary;
+	-webkit-box-shadow: 0px 3px 5px 0px $grey;
+	-moz-box-shadow: 0px 3px 5px 0px $grey;
+	box-shadow: 0px 3px 5px 0px $grey;
 
 	.brandLogo {
 		max-height: 150px;
