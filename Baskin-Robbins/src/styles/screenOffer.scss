@@ -129,6 +129,7 @@
 
 		p {
 			margin-bottom: $gutter;
+			color: $black;
 		}
 		
 		.button {
@@ -147,7 +148,7 @@
 			}
 
 			&#cancel {
-				background-color: $clientSecondary;
+				background-color: $grey;
 			}
 
 			&#confirm {
