@@ -20,7 +20,7 @@ section {
 	width: 100%;
 	max-width: 414px;
 	margin: 0px auto;
-	padding: $gutter 0px;
+	padding: 0px 0px $gutter 0px;
 }
 
 h1, h3 {
@@ -76,12 +76,13 @@ p {
 
 #offerText {
 
-	padding: $gutter 0px;
+	// padding: $gutter 0px;
 	color: $white;
 	width: 100% !important;
 
 	img {
-		width: 100%;
+		width: 90%;
+		max-width: 414px;
 	}
 
 	h1 {

@@ -51,27 +51,30 @@
   <!-- ### End Logo Container ### -->
   
   <!-- ### Start Offer Text Container ### -->
-  <div class="container-fluid" id="offerText">
-    <img src="dist/images/imageQR.jpg" alt="" class="imageQR">
-    <img src="dist/images/imageNoQR.jpg" alt="" class="hide imageNoQR">
+  <div class="container-fluid" id="offerText" style="padding-bottom: 20px;">
+    <img src="dist/images/offerImage.png" alt="Get a FREE 6-Inch Sub When You Buy a 30oz. Drink">
   </div>
   <!-- ### End Offer Text Container ### -->
 
   <!-- ### Start Main Content Container ### -->
 
   <div class="container">
-    
-    <!-- ### Start Main Legal Container ### -->
-    <section class="mainLegal">
-      <p>Additional charges for extras and deluxe. Plus tax. No cash value. 1 coupon per customer. May not be combined with other offers, coupons, or discount cards. Void if transferred, sold, auctioned, reproduced, or altered. No coupon necessary. SUBWAY&reg; is a Registered Trademark of Subway IP Inc. &copy; 2016 Subway IP Inc.</p>
+
+    <section id="QRCode">
+      
     </section>
-    <!-- ### End Main Legal Container ### -->
 
     <!-- ### Start Add to Wallet Section ### -->
     <section id="addToWallet">
       <a href="files/StoreCard.pkpass" class="addToWalletButton"><img src="dist/images/add-to-wallet.svg" alt="Add to Wallet"></a>
     </section>
     <!-- ### End Add to Wallet Section ### -->
+
+    <!-- ### Start Main Legal Container ### -->
+    <section class="mainLegal">
+      <p>Additional charges for extras and deluxe. Plus tax. No cash value. 1 coupon per customer. May not be combined with other offers, coupons, or discount cards. Void if transferred, sold, auctioned, reproduced, or altered. No coupon necessary. SUBWAY&reg; is a Registered Trademark of Subway IP Inc. &copy; 2016 Subway IP Inc.</p>
+    </section>
+    <!-- ### End Main Legal Container ### -->
 
   </div>
   <!-- ### End Main Content Container ### -->
@@ -106,6 +109,9 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
    <!-- ### Main Minified JS Include -->
    <script src="dist/scripts/main.min.js"></script>
+   <!-- ### QR Code Script ### -->
+   <script src="vendors/jquery.qrcode.min.js"></script>
+   <script>$('#QRCode').qrcode({width: 192, height: 192, text: window.location.href});</script>
  </body>
 
 </html>
