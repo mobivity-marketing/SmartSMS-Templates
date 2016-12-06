@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- {% autoescape true %} -->
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Mobivity">
+		<title>SUBWAY® SmartSMS</title>
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="dist/styles/screenRedeem.css">
+    <!-- ### FAVICON IMPORT ### -->
+		<link rel="icon" type="image/x-icon" href="dist/images/subway-favicon.png" /> 
+		<!-- ### To support cross browser cache controls ### -->
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+	</head>
+
+  <body>
+
+  <!-- ### Start Facebook Connect JS ### -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '923091201099481',
+        xfbml      : true,
+        version    : 'v2.5'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- ### End Facebook Connect JS ### -->
+  
+  <!-- ### Start Logo Container ### -->
+  <div class="container-fluid" id="logo">
+    <img src="dist/images/subway-logo.png" alt="SUBWAY Logo" class="brandLogo">
+  </div>
+  <!-- ### End Logo Container ### -->
+  
+  <!-- ### Start Offer Text Container ### -->
+  <div class="container-fluid" id="offerText">
+    <h1>{{ offer_text }}</h1>
+  </div>
+  <!-- ### End Offer Text Container ### -->
+
+  <!-- ### Start Main Content Container ### -->
+
+  <div class="container">
+    
+    <!-- ### Start Countdown Row ### -->
+    <div class="row" id="expirationTimerSection">
+
+      <!-- ### Start Countdown Text ### -->
+      <div class="col-xs-6 columnHeightMatch" id="countdownText">
+        <div class="verticalCenterWrapper">
+          <h3>Expiration Timer</h3>
+          <p>Coupon expires on {{ ExpiresDate }}.</p>
+        </div>
+      </div>
+      <!-- ### End Countdown Text ### -->
+
+      <!-- ### Start Countdown Timer -->
+      <div class="col-xs-6 columnHeightMatch" id="countdownTimer">
+        <div class="c-container">
+          <div class="c-text"></div>
+          <svg id="yeah" viewbox="-5 -5 110 110">
+            <path id="bg" stroke-linecap="round" stroke-width="10" stroke="#E6E7E8" fill="none" d="M50 2 a 48 48 0 0 1 0 96 a 48 48 0 0 1 0 -96"></path>
+            <path id="progress" stroke-linecap="round" stroke-width="10" stroke="#68BC49" fill="none" d="M50 2 a 48 48 0 0 1 0 96 a 48 48 0 0 1 0 -96"></path>
+          </svg>
+        </div>
+      </div>
+      <!-- ### End Countdown Timer ### -->
+
+    </div>
+    <!-- ### End Countdown Row ### -->
+
+    <!-- ### Start Refer a Friend Button ### -->
+    <div id="referButton">
+      <a href="screenRefer.html" id="button">Earn More Free Subs!</a>
+    </div>
+    <!-- ### End Refer a Friend Button ### -->
+
+    <!-- ### Start Fine Print Text ### -->
+    <div id="redeemFinePrint">
+      <p>Exclusions apply. If the timer is not moving, this offer is no longer valid.</p>
+    </div>
+    <!-- ### End Fine Print Text ### -->
+
+  </div>
+  <!-- ### End Main Content Container ### -->
+
+  <!-- ### jQuery CDN Include ### -->
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+  <!-- ### Bootstrap JS CDN Include ### -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- ### Inclusions for Countdown Timer ### -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+  <script src="https://rawgit.com/mckamey/countdownjs/master/countdown.min.js"></script>
+  <script src="https://rawgit.com/mckamey/countdownjs/master/countdown.min.js"></script>
+
+  <!-- ### Main Minified JS Include -->
+  <script src="dist/scripts/main.min.js"></script>
+
+  <!-- ### Start Match Height Function ### -->
+  <script>
+    $(function() {
+        $('.columnHeightMatch').matchHeight();
+    });
+  </script>
+  <!-- ### End Match Height Function ### -->
+
+  <!-- ### Start Countdown Timer Function ### -->
+  <script>
+    $(function() {
+      var yeah = new Countdown({minutes: 0, seconds: 30}, $(".c-container"));
+    })
+  </script>
+  <!-- ### End Countdown Timer Function ### -->
+
+ </body>
+
+</html>
+<!-- {% endautoescape %} -->
+
