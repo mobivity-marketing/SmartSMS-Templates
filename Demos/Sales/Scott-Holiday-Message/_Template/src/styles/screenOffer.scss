@@ -2,7 +2,6 @@
 // Imports
 // //////////////////////////////////////////////////////////////////////////////////////////////
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
 @import 'reset';
 @import 'variables';
 @import 'global';
@@ -14,9 +13,19 @@
 .mainLegal {
 	
 	p {
-		font-size: 10px;
-		color: $black;
+		font-size: 18px;
 		font-weight: 300;
+		color: $black;
+		line-height: 1.1em;
+	}
+
+	a {
+		font-weight: 700;
+		color: $green;
+	}
+
+	span {
+		font-weight: 700;
 	}
 
 }
@@ -38,41 +47,6 @@
 	padding: $gutter/2 0px;
 	font-size: 10px;
 	color: $black;
-}
-
-// //////////////////////////////////////////////////////////////////////////////////////////////
-// Feedback Styles
-// //////////////////////////////////////////////////////////////////////////////////////////////
-
-#feedback {
-	
-	button {
-		text-decoration: none;
-		color: #fff;
-		box-shadow: $box-shadow;
-		text-align: center;
-		font-weight: 700;
-	}
-
-	#Likeofferfeedback {
-		background-color: $green;
-		transition: $transition;
-
-		&:hover {
-			background-color: $greenDark;
-		}
-
-	}
-
-	#DisLikeofferfeedback {
-		background-color: $red;
-		transition: $transition;
-
-		&:hover {
-			background-color: $redDark;
-		}
-	}
-
 }
 
 // //////////////////////////////////////////////////////////////////////////////////////////////
@@ -120,12 +94,13 @@
 
 	.modal-title {
 		font-weight: 700;
-		font-size: 24px;
+		font-size: 18px;
 	}
 
 	.modal-body {
 		width: 75%;
 		margin: 0px auto;
+		color: $black;
 
 		p {
 			margin-bottom: $gutter;
