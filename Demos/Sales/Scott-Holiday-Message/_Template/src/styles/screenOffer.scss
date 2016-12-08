@@ -12,6 +12,17 @@
 
 .mainLegal {
 	
+	h3 {
+		font-size: 24px;
+		font-weight: 300;
+		color: $green;
+
+		span {
+			font-weight: 700;
+		}
+
+	}
+
 	p {
 		font-size: 18px;
 		font-weight: 300;
