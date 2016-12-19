@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- {% autoescape true %} -->
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Mobivity">
+		<title>Mobivity SmartMessenger</title>
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="dist/styles/screenOffer.css">
+    <!-- ### FAVICON IMPORT ### -->
+		<link rel="icon" type="image/x-icon" href="dist/images/favicon.png" />
+	</head>
+
+  <body>
+  
+  <!-- ### Start Logo Container ### -->
+  <div class="container-fluid" id="logo">
+    <a href="index.html"><img src="dist/images/logo.png" alt="Mobivity Logo" class="brandLogo"></a>
+  </div>
+  <!-- ### End Logo Container ### -->
+  
+  <!-- ### Start Offer Text Container ### -->
+  <div class="container-fluid" id="offerText">
+    <h1>Happy Holidays, Katherine!</h1>
+  </div>
+  <!-- ### End Offer Text Container ### -->
+
+  <!-- ### Start Main Content Container ### -->
+
+  <div class="container">
+    
+    <!-- ### Start Main Legal Container ### -->
+    <section class="mainLegal">
+      <h3>Click <span>redeem</span> below for a $5 Starbucks gift card, and enjoy a holiday treat on us!</h3>
+      <hr>
+      <p>With Mobivity, you can reach your customers where they pay their attention most, their mobile phone. Please let me know when you have time to meet and learn more about what we do by <a href="mailto:scott.rogers@mobivity.com">sending me an email</a> or calling me at <a href="tel:+16029045704">(602) 904-5704</a>.</p>
+    </section>
+    <!-- ### End Main Legal Container ### -->
+
+    <!-- ### Start Redeem Button Section ### -->
+    <section id="init_redeem" data-toggle="modal" data-target="#myModal">
+      <section>
+        <a href="#" id="button">Redeem</a>
+      </section>
+    </section>
+    <!-- ### Start Redeem Button Section ### -->
+
+  </div>
+  <!-- ### End Main Content Container ### -->
+
+  <!-- ### Start Page Footer ### -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <img src="dist/images/presents.png" alt="Holiday Presents">
+    </div>
+  </footer>
+  <!-- ### End Page Footer ### -->
+
+  <!-- ### Start Modal Container ### -->
+  <div id="myModal" class="modal animate fadeIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <!-- ### Modal Header ### -->
+        <div class="modal-header">
+          <h2 id="myModalLabel" class="modal-title">Redeem Gift Card</h2>
+        </div>
+        <!-- ### End Modal Header ### -->
+
+        <!-- ### State Modal Body ### -->
+        <div class="modal-body">
+          <p>Once you click confirm, a countdown timer will begin. This timer can be set to any amount of time to limit the use of your offers to your liking, and prevent consumer fraud.</p>
+          <a href="screenRedeem.html" class="button" id="confirm">Confirm</a>
+          <a href="#" data-dismiss="modal" class="button" id="cancel">Cancel</a>
+        </div>
+        <!-- ### End Modal Body ### -->
+
+      </div>
+    </div>
+  </div>
+  <!-- ### End Modal Container ### -->
+
+   <!-- ### jQuery CDN Include ### -->
+   <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+   <!-- ### Bootstrap JS CDN Include ### -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <!-- ### Main Minified JS Include -->
+   <script src="dist/scripts/main.min.js"></script>
+ </body>
+
+</html>
+<!-- {% endautoescape %} -->
+

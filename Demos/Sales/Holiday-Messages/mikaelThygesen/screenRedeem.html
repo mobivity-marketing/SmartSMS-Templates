@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- {% autoescape true %} -->
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Mobivity">
+		<title>Mobivity SmartMessenger</title>
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="dist/styles/screenRedeem.css">
+    <!-- ### FAVICON IMPORT ### -->
+		<link rel="icon" type="image/x-icon" href="dist/images/favicon.png" />
+	</head>
+
+  <body>
+  
+  <!-- ### Start Logo Container ### -->
+  <div class="container-fluid" id="logo">
+    <a href="index.html"><img src="dist/images/logo.png" alt="Mobivity Logo" class="brandLogo"></a>
+  </div>
+  <!-- ### End Logo Container ### -->
+  
+  <!-- ### Start Offer Text Container ### -->
+  <div class="container-fluid" id="offerText">
+    <h1>Happy Holidays, Mikael!</h1>
+  </div>
+  <!-- ### End Offer Text Container ### -->
+
+  <!-- ### Start Barcode Image and Description Container ### -->
+  <div class="container" id="barcode">
+    <p>Scan the barcode below at your neighborhood Starbucks for a holiday treat from Mobivity!</p>
+    <img src="dist/images/barcode.png">
+    <p>Card Number: 6100805003529620</p>
+  </div>
+  <!-- ### End Barcode Container ### -->
+
+  <!-- ### Start Main Content Container ### -->
+
+  <div class="container">
+    
+    <!-- ### Start Countdown Row ### -->
+    <div class="row" id="expirationTimerSection">
+
+      <!-- ### Start Countdown Text ### -->
+      <div class="col-xs-6 columnHeightMatch" id="countdownText">
+        <div class="verticalCenterWrapper">
+          <h3>Expiration Timer</h3>
+          <p>Gift card expires on 1/1/17.</p>
+        </div>
+      </div>
+      <!-- ### End Countdown Text ### -->
+
+      <!-- ### Start Countdown Timer -->
+      <div class="col-xs-6 columnHeightMatch" id="countdownTimer">
+        <div class="c-container">
+          <div class="c-text"></div>
+          <svg id="yeah" viewbox="-5 -5 110 110">
+            <path id="bg" stroke-linecap="round" stroke-width="10" stroke="#E6E7E8" fill="none" d="M50 2 a 48 48 0 0 1 0 96 a 48 48 0 0 1 0 -96"></path>
+            <path id="progress" stroke-linecap="round" stroke-width="10" stroke="#68BC49" fill="none" d="M50 2 a 48 48 0 0 1 0 96 a 48 48 0 0 1 0 -96"></path>
+          </svg>
+        </div>
+      </div>
+      <!-- ### End Countdown Timer ### -->
+
+    </div>
+    <!-- ### End Countdown Row ### -->
+
+    <!-- ### Start Refer a Friend Button ### -->
+    <div id="referButton">
+      <a href="screenRefer.html" id="button">Want to Grow Organically?</a>
+    </div>
+    <!-- ### End Refer a Friend Button ### -->
+
+  </div>
+  <!-- ### End Main Content Container ### -->
+
+  <!-- ### Start Page Footer ### -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <img src="dist/images/presents.png" alt="Holiday Presents">
+    </div>
+  </footer>
+  <!-- ### End Page Footer ### -->
+
+  <!-- ### jQuery CDN Include ### -->
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+  <!-- ### Bootstrap JS CDN Include ### -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- ### Inclusions for Countdown Timer ### -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+  <script src="https://rawgit.com/mckamey/countdownjs/master/countdown.min.js"></script>
+  <script src="https://rawgit.com/mckamey/countdownjs/master/countdown.min.js"></script>
+
+  <!-- ### Main Minified JS Include -->
+  <script src="dist/scripts/main.min.js"></script>
+
+  <!-- ### Start Match Height Function ### -->
+  <script>
+    $(function() {
+        $('.columnHeightMatch').matchHeight();
+    });
+  </script>
+  <!-- ### End Match Height Function ### -->
+
+  <!-- ### Start Countdown Timer Function ### -->
+  <script>
+    $(function() {
+      var yeah = new Countdown({minutes: 5, seconds: 0}, $(".c-container"));
+    })
+  </script>
+  <!-- ### End Countdown Timer Function ### -->
+
+ </body>
+
+</html>
+<!-- {% endautoescape %} -->
+
